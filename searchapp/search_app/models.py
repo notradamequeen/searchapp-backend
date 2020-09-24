@@ -2,14 +2,14 @@ from django.contrib.postgres.search import (
     SearchQuery,
     SearchRank,
     SearchVector,
-    TrigramSimilarity,
-    SearchVectorField
+    TrigramSimilarity
 )
 from django.db import models
 from django.db.models import Q
 
+
 # Create your models here.
-class ZztempCodinghw2ModelManager(models.Manager):
+class AutocompleteModelManager(models.Manager):
     def search(self, text):
         search_vectors = (
             SearchVector('text1', weight='A') +
@@ -29,13 +29,12 @@ class ZztempCodinghw2ModelManager(models.Manager):
         ).order_by('-rank', 'text1')
 
 
-class ZztempCodinghw2Model(models.Model):
+class AutocompleteModel(models.Model):
     id = models.BigAutoField(primary_key=True)
     text1 = models.TextField()
     text2 = models.TextField()
 
-    objects = ZztempCodinghw2ModelManager()
+    objects = AutocompleteModelManager()
 
     class Meta:
         db_table = 'zztemp_codinghw2'
-        app_label = 'doc_search'

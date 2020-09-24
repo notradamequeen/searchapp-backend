@@ -32,7 +32,6 @@ This searchapp project is powered by:
 ```
 [
 	{
-		score: float,
 		text1: string,
 		text2: string
 	},

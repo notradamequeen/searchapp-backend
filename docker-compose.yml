@@ -1,6 +1,7 @@
 version: '3.3'
 services:
   app:
+    container_name: searchapp
     build: ./searchapp
     ports:
       - "80:8000"
@@ -20,6 +21,7 @@ services:
 
   postgres:
     image: postgres:latest
+    container_name: searchapp-postgres
     environment: 
       - POSTGRES_DB=searchappdb
       - POSTGRES_USER=searchappuser
@@ -31,7 +33,7 @@ services:
 
   elasticsearch:
       image: bitnami/elasticsearch:latest
-      container_name: es01
+      container_name: searchapp-elasticsearch
       environment:
         - node.name=es01
         - cluster.name=es-docker-cluster
