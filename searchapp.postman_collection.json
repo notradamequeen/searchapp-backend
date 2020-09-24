@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "98acb33e-14c6-407a-8493-df49362c8757",
+		"name": "searchapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "search-autocomplete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:80/api/search-autocomplete/?search=asscott jkrta",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"search-autocomplete",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "asscott jkrta"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

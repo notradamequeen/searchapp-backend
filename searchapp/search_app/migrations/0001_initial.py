@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='ZztempCodinghw2Model',
+            name='AutocompleteModel',
             fields=[
                 ('id', models.BigAutoField(primary_key=True, serialize=False)),
                 ('text1', models.TextField()),
