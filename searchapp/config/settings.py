@@ -115,7 +115,7 @@ REST_FRAMEWORK = {
 
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': env('ES_HOST', default='elasticsearch:9200')
+        'hosts': env('ES_HOST', default='localhost:9200')
     },
 }
 

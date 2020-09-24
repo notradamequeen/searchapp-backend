@@ -20,7 +20,8 @@ This searchapp project is powered by:
 5. activate virtualenv.
 6. clone searchapp-backend source code
 ```git clone https://github.com/notradamequeen/searchapp-backend.git```
-7. to run the app run `docker compose up` this will take several minutes until it's up.
+7. to run the app run `docker-compose up` this will take several minutes until it's up.
+8. to shut down the app run `docker-compose down`
 
   
 

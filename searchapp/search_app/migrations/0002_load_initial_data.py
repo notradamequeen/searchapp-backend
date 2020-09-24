@@ -15,7 +15,7 @@ def load_initial_data(apps, schema_editor):
         if last_batch > 0:
             batch_num += 1
         for batch in range(0, batch_num):
-            print('--batch', batch)
+            print('--batch', batch + 1)
             if batch == (batch_num):
                 sql_statement = sql_statements[first:]
             else:

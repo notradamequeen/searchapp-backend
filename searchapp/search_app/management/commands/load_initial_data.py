@@ -24,7 +24,7 @@ class Command(BaseCommand):
     def load_initial_data(self):
         file_path = os.path.join(settings.BASE_DIR, 'db_script/codinghw2.sql')
         sql_statements = open(file_path).readlines()
-        per_batch = 100000
+        per_batch = 50000
         first = 0
         last = per_batch
         batch_num = len(sql_statements) // per_batch
@@ -32,7 +32,7 @@ class Command(BaseCommand):
         if last_batch > 0:
             batch_num += 1
         for batch in range(0, batch_num):
-            print('btach', batch)
+            print('batch --', batch + 1)
             if batch == (batch_num):
                 sql_statement = sql_statements[first:]
             else:
